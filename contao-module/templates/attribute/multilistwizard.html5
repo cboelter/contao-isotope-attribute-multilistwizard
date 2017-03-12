@@ -1,0 +1,21 @@
+<table>
+    <?php $index = 0; foreach($this->listItems as $row): ?>
+    <?php if($index == 0): ?>
+    <thead>
+    <tr>
+        <?php foreach($this->multilistwizard as $config): ?>
+        <td><?php echo ($config['label'] ?: $config['column']); ?></td>
+        <?php endforeach; ?>
+    </tr>
+    </thead>
+    <tbody>
+    <?php endif; ?>
+
+    <tr>
+        <?php foreach($row as $columnName => $value): ?>
+        <td><?php echo $value; ?></td>
+        <?php endforeach; ?>
+    </tr>
+    <?php $index++; endforeach; ?>
+    </tbody>
+</table>

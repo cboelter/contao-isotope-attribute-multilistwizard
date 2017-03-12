@@ -1,0 +1,9 @@
+<ul>
+    <?php foreach($this->listItems as $row): ?>
+    <li>
+        <?php foreach ($row as $value): ?>
+        <?php echo $value; ?>
+        <?php endforeach; ?>
+    </li>
+    <?php endforeach; ?>
+</ul>
