@@ -5,6 +5,8 @@
     "contao",
     "isotope",
     "ecommerce",
+    "listwizard",
+    "multilistwizard",
     "isotope ecommerce"
   ],
   "type": "contao-module",
