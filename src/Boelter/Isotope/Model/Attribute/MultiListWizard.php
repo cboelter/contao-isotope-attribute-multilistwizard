@@ -6,9 +6,17 @@ use Contao\FrontendTemplate;
 use Isotope\Interfaces\IsotopeProduct;
 use Isotope\Model\Attribute;
 
+/**
+ * Class MultiListWizard
+ *
+ * @package Boelter\Isotope\Model\Attribute
+ */
 class MultiListWizard extends Attribute
 {
 
+    /**
+     * @inheritdoc
+     */
     public function getBackendWidget()
     {
         if (!isset($GLOBALS['BE_FFL']['multiColumnWizard'])) {
@@ -44,6 +52,7 @@ class MultiListWizard extends Attribute
         }
 
         // add the fields to the attribute
+        $arrData['fields'][$this->field_name]['eval']['dragAndDrop']  = true;
         $arrData['fields'][$this->field_name]['eval']['columnFields'] = $dcaConfig;
         $arrData['fields'][$this->field_name]['sql']                  = "blob NULL";
     }
